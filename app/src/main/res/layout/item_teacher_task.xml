@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="18dp"
+    android:background="@drawable/bg_task_teacher"
+    android:layout_marginBottom="18dp">
+
+    <!-- TITLE -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bab 5: Matriks"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="#1C2E5E"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="H-1"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/bg_deadline_red"/>
+    </RelativeLayout>
+
+    <!-- DEADLINE -->
+    <TextView
+        android:id="@+id/tvDeadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tenggat waktu : besok, 25 Oktober 2026 15.30"
+        android:textSize="14sp"
+        android:textColor="#4A5A7A"
+        android:layout_marginTop="10dp"/>
+
+    <!-- PROGRESS -->
+    <ProgressBar
+        android:id="@+id/progressTask"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:max="100"
+        android:progress="70"
+        android:progressTint="#67B3E9"
+        android:layout_marginTop="16dp"/>
+
+    <!-- SUBMISSION -->
+    <TextView
+        android:id="@+id/tvSubmission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25 / 36 siswa sudah mengumpulkan"
+        android:textStyle="bold"
+        android:textColor="#1C2E5E"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"/>
+
+    <!-- BUTTON -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bg_button_blue"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buka"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_arrow_right"
+            android:tint="#FFFFFF"/>
+    </LinearLayout>
+
+</LinearLayout>

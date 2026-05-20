@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- HEADER -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_back"
+                    android:tint="#233B6E"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tambah Materi"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="#233B6E"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+            <!-- NAMA MAPEL -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Mata Pelajaran"
+                android:textStyle="bold"
+                android:textColor="#555555"
+                android:layout_marginTop="40dp"/>
+
+            <EditText
+                android:id="@+id/etSubject"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edittext"
+                android:hint="Contoh: Matematika"
+                android:paddingHorizontal="16dp"
+                android:textColor="#000000"
+                android:textColorHint="#BDBDBD"/>
+
+            <!-- DESKRIPSI -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi Materi"
+                android:textStyle="bold"
+                android:textColor="#555555"
+                android:layout_marginTop="24dp"/>
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edittext"
+                android:gravity="top"
+                android:hint="Tambahkan deskripsi tugas yang harus dikerjakan siswa"
+                android:padding="16dp"
+                android:textColor="#000000"
+                android:textColorHint="#BDBDBD"/>
+
+            <!-- KELAS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelas"
+                android:textStyle="bold"
+                android:textColor="#555555"
+                android:layout_marginTop="24dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edittext"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:id="@+id/tvClass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XI PPLG 3"
+                    android:textColor="#666666"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    android:tint="#BDBDBD"/>
+            </RelativeLayout>
+
+            <!-- FILE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lampiran file (opsional)"
+                android:textStyle="bold"
+                android:textColor="#555555"
+                android:layout_marginTop="24dp"/>
+
+            <LinearLayout
+                android:id="@+id/btnUpload"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_upload"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:src="@drawable/ic_upload"
+                    android:tint="#C4C4C4"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload file"
+                    android:textColor="#BDBDBD"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- BUTTON -->
+            <Button
+                android:id="@+id/btnSaveMaterial"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/bg_button_blue"
+                android:text="Simpan Materi"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

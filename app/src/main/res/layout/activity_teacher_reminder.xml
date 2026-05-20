@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="12dp">
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reminder"
+            android:textStyle="bold"
+            android:textColor="#1F3763"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="October 2026"
+            android:textColor="#1F3763"
+            android:textSize="13sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"/>
+
+        <!-- CALENDAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_calendar"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <!-- HEADER -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="7">
+
+                <TextView android:text="Sen" style="@style/calendarHeader"/>
+                <TextView android:text="Sel" style="@style/calendarHeader"/>
+                <TextView android:text="Rab" style="@style/calendarHeader"/>
+                <TextView android:text="Kam" style="@style/calendarHeader"/>
+                <TextView android:text="Jum" style="@style/calendarHeader"/>
+                <TextView android:text="Sab" style="@style/calendarHeader"/>
+                <TextView android:text="Min" style="@style/calendarHeader"/>
+            </GridLayout>
+
+            <!-- DATE -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="7"
+                android:layout_marginTop="8dp">
+
+                <!-- WEEK 1 -->
+                <TextView android:text="27" style="@style/calendarDay"/>
+                <TextView android:text="28" style="@style/calendarDay"/>
+                <TextView android:text="29" style="@style/calendarDay"/>
+                <TextView android:text="30" style="@style/calendarDay"/>
+                <TextView android:text="1" style="@style/calendarDay"/>
+                <TextView android:text="2" style="@style/calendarDay"/>
+                <TextView android:text="3" style="@style/calendarDay"/>
+
+                <!-- WEEK 2 -->
+                <TextView android:text="4" style="@style/calendarDay"/>
+                <TextView android:text="5" style="@style/calendarDay"/>
+                <TextView android:text="6" style="@style/calendarDay"/>
+                <TextView android:text="7" style="@style/calendarDay"/>
+                <TextView android:text="8" style="@style/calendarDay"/>
+                <TextView android:text="9" style="@style/calendarDay"/>
+                <TextView android:text="10" style="@style/calendarDay"/>
+
+                <!-- WEEK 3 -->
+                <TextView android:text="11" style="@style/calendarDay"/>
+                <TextView android:text="12" style="@style/calendarDay"/>
+                <TextView android:text="13" style="@style/calendarDay"/>
+                <TextView android:text="14" style="@style/calendarDay"/>
+                <TextView android:text="15" style="@style/calendarDay"/>
+                <TextView android:text="16" style="@style/calendarDay"/>
+                <TextView android:text="17" style="@style/calendarDay"/>
+
+                <!-- WEEK 4 -->
+                <TextView android:text="18" style="@style/calendarDay"/>
+                <TextView android:text="19" style="@style/calendarDay"/>
+                <TextView android:text="20" style="@style/calendarDay"/>
+                <TextView android:text="21" style="@style/calendarDay"/>
+                <TextView android:text="22" style="@style/calendarDay"/>
+                <TextView android:text="23" style="@style/calendarDay"/>
+
+                <!-- ACTIVE -->
+                <LinearLayout
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_active_date">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- WEEK 5 -->
+                <TextView android:text="25" style="@style/calendarDay"/>
+                <TextView android:text="26" style="@style/calendarDay"/>
+                <TextView android:text="27" style="@style/calendarDay"/>
+                <TextView android:text="28" style="@style/calendarDay"/>
+                <TextView android:text="29" style="@style/calendarDay"/>
+                <TextView android:text="30" style="@style/calendarDay"/>
+                <TextView android:text="31" style="@style/calendarDay"/>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tugas siswa"
+            android:textColor="#B6B6B6"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="4dp"/>
+
+        <!-- LIST -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReminderTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp"/>
+
+        <!-- NAV -->
+        <include
+            layout="@layout/bottom_nav_teacher"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

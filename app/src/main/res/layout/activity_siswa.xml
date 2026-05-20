@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F6F9">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matematika"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="#1C3B6B"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XI PPLG 3"
+            android:textSize="14sp"
+            android:textColor="#5E6B7A"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <!-- TAB -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:background="#5AA9E6"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tugas"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Materi"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Siswa"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <!-- LIST SISWA -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSiswa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        tools:listitem="@layout/item_siswa"/>
+
+</LinearLayout>

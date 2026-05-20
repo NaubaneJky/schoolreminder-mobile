@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <!-- CONTENT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daftar Kelas"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:textColor="#233B6E"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_school"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SMKN 8 Semarang"
+                        android:textSize="12sp"
+                        android:textColor="#7A7A7A"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/ic_profile"
+                android:background="@drawable/bg_profile_circle"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelas saya"
+            android:textStyle="bold"
+            android:textColor="#B0B0B0"
+            android:layout_marginTop="18dp"
+            android:textSize="13sp"/>
+
+        <!-- CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_white_card"
+            android:padding="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTeacherClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+
+        <!-- BUTTON -->
+        <LinearLayout
+            android:id="@+id/btnCreateClass"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_button_blue"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Buat Kelas"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_add"
+                android:tint="#FFFFFF"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- BOTTOM NAV -->
+    <include
+        layout="@layout/bottom_nav_teacher"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

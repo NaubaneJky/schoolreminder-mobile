@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hai, Guru 👋"
+                        android:textStyle="bold"
+                        android:textSize="24sp"
+                        android:textColor="#233B6E"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Semangat mengajar hari ini!"
+                        android:textColor="#4A4A4A"
+                        android:textSize="14sp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_school"/>
+
+                        <TextView
+                            android:id="@+id/tvSchool"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nama Sekolah"
+                            android:layout_marginStart="5dp"
+                            android:textColor="#7A7A7A"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/ic_profile"
+                    android:background="@drawable/bg_profile_circle"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+            <!-- PINTASAN -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pintasan"
+                android:textStyle="bold"
+                android:textColor="#B0B0B0"
+                android:layout_marginTop="25dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="15dp">
+
+                <!-- BUAT KELAS -->
+                <LinearLayout
+                    android:id="@+id/btnBuatKelas"
+                    android:layout_width="95dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/bg_shortcut_blue"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/ic_add"
+                        android:background="@drawable/bg_circle_blue"
+                        android:padding="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Buat\nKelas"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#3A3A3A"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+                <!-- TUGAS -->
+                <LinearLayout
+                    android:id="@+id/btnTambahTugas"
+                    android:layout_width="95dp"
+                    android:layout_height="110dp"
+                    android:layout_marginStart="18dp"
+                    android:background="@drawable/bg_shortcut_green"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/ic_task"
+                        android:background="@drawable/bg_circle_green"
+                        android:padding="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tambah\nTugas"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#3A3A3A"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+                <!-- MATERI -->
+                <LinearLayout
+                    android:id="@+id/btnUploadMateri"
+                    android:layout_width="95dp"
+                    android:layout_height="110dp"
+                    android:layout_marginStart="18dp"
+                    android:background="@drawable/bg_shortcut_orange"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/ic_upload"
+                        android:background="@drawable/bg_circle_orange"
+                        android:padding="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload\nMateri"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#3A3A3A"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- KELAS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelas saya"
+                android:textStyle="bold"
+                android:textColor="#B0B0B0"
+                android:layout_marginTop="25dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvClassTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:nestedScrollingEnabled="false"/>
+
+            <!-- TUGAS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tugas siswa"
+                android:textStyle="bold"
+                android:textColor="#B0B0B0"
+                android:layout_marginTop="25dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTeacherTask"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:nestedScrollingEnabled="false"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- NAVIGATION — pakai bottom_nav_teacher bukan bottom_nav -->
+    <include
+        layout="@layout/bottom_nav_teacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

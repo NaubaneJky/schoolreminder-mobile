@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <!-- CARD LOGIN -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="28dp"
+        android:background="@drawable/bg_login_card"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <!-- LOGO -->
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logo_school"/>
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selamat Datang di\nSchool Reminder!"
+            android:textStyle="bold"
+            android:textColor="#1D2B53"
+            android:textSize="32sp"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="4dp"/>
+
+        <!-- SUBTITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="permudah jadwal sekolah, tugas,\ndan ujian Anda."
+            android:textColor="#8B8B8B"
+            android:textSize="15sp"
+            android:layout_marginTop="18dp"
+            android:lineSpacingExtra="2dp"/>
+
+        <!-- USERNAME -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/bg_input">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_user"/>
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/transparent"
+                android:hint="Nama Pengguna"
+                android:textColor="#1D2B53"
+                android:textColorHint="#1D2B53"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- PASSWORD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/bg_input">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_lock"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/transparent"
+                android:hint="Kata Sandi"
+                android:textColor="#1D2B53"
+                android:textColorHint="#1D2B53"
+                android:textSize="16sp"
+                android:inputType="textPassword"/>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_eye"/>
+        </LinearLayout>
+
+        <!-- REMEMBER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingatkan Saya"
+                android:textColor="#B5B5B5"
+                android:textSize="13sp"
+                android:buttonTint="#D0D0D0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lupa kata sandi?"
+                android:textColor="#B5B5B5"
+                android:textSize="13sp"
+                android:layout_marginStart="40dp"/>
+        </LinearLayout>
+
+        <!-- BUTTON -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:text="Masuk"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#162B5B"/>
+
+        <!-- REGISTER -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belum Punya Akun ?"
+            android:textColor="#B5B5B5"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar Sekarang"
+            android:textStyle="bold"
+            android:textColor="#1D2B53"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

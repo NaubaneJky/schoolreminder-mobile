@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <!-- CONTENT -->
+
+    <!-- BOTTOM NAV -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Profil"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- PHOTO -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/bg_profile_circle"
+                android:padding="15dp"
+                android:src="@drawable/ic_profile" />
+
+            <ImageButton
+                android:id="@+id/btnEditPhoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_edit_button"
+                android:src="@drawable/ic_edit"
+                android:tint="@android:color/white" />
+        </FrameLayout>
+
+        <!-- NAME -->
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="Vica Allistya M."
+            android:textColor="#233B6E"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- CLASS -->
+        <TextView
+            android:id="@+id/tvClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_class_badge"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            android:text="XI PPLG 3"
+            android:textColor="#7FBF66"
+            android:textStyle="bold" />
+
+        <!-- FORM -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <!-- FIELD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_profile_field"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Lengkap"
+                    android:textColor="#B0B0B0"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vica Allistya Maharani"
+                    android:textColor="#3A3A3A"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- GENDER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_profile_field"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis Kelamin"
+                    android:textColor="#B0B0B0"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perempuan"
+                    android:textColor="#3A3A3A"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- EMAIL -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_profile_field"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textColor="#B0B0B0"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="vicaallistya@gmail.com"
+                    android:textColor="#3A3A3A"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- NOMOR -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_profile_field"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor sekolah"
+                    android:textColor="#B0B0B0"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11202"
+                    android:textColor="#3A3A3A"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- KELAS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/bg_profile_field"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kelas"
+                    android:textColor="#B0B0B0"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XI PPLG 3"
+                    android:textColor="#3A3A3A"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/bottom_nav"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

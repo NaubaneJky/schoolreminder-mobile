@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- INTERNET -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.SCHOOLREMINDERR"
+
+        android:usesCleartextTraffic="true">
+
+        <!-- SPLASH -->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
+        <!-- LOGIN -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false"/>
+
+        <!-- REGISTER -->
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false"/>
+
+        <!-- HOME STUDENT -->
+        <activity
+            android:name=".activity.HomeStudentActivity"
+            android:exported="false"/>
+
+
+        <activity
+            android:name=".activity.HomeTeacherActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".activity.CreateClassActivity"
+            android:exported="false"/>
+
+        <!-- MAIN -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/>
+
+    </application>
+
+</manifest>

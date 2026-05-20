@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:layout_marginBottom="20dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- STRIP WARNA -->
+        <View
+            android:id="@+id/viewColor"
+            android:layout_width="14dp"
+            android:layout_height="match_parent"
+            android:background="#B084CC"/>
+
+        <!-- CONTENT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvClassName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Matematika"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#1D2B53"/>
+
+                <TextView
+                    android:id="@+id/tvTeacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pak budi"
+                    android:textSize="16sp"
+                    android:textColor="#444"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnOpen"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:text="buka kelas"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#B084CC"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- HEADER -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_arrow_back_24"
+                    android:tint="#233B6E"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buat Kelas"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="#233B6E"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+            <!-- NAMA KELAS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Kelas"
+                android:textStyle="bold"
+                android:textColor="#555555"
+                android:layout_marginTop="40dp"/>
+
+            <EditText
+                android:id="@+id/etClassName"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edittext"
+                android:hint="Contoh: Matematika"
+                android:paddingHorizontal="16dp"
+                android:textColor="#000000"
+                android:textColorHint="#BDBDBD"/>
+
+            <!-- TINGKAT -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tingkat Kelas"
+                android:textStyle="bold"
+                android:textColor="#555555"
+                android:layout_marginTop="24dp"/>
+
+            <EditText
+                android:id="@+id/etLevel"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edittext"
+                android:hint="Contoh: XI TJKT 2"
+                android:paddingHorizontal="16dp"
+                android:textColor="#000000"
+                android:textColorHint="#BDBDBD"/>
+            <!-- KODE KELAS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kode Kelas"
+                android:textStyle="bold"
+                android:textColor="#555555"
+                android:layout_marginTop="24dp"/>
+
+            <EditText
+                android:id="@+id/etClassCode"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edittext"
+                android:hint="Contoh: 14302075"
+                android:paddingHorizontal="16dp"
+                android:textColor="#000000"
+                android:textColorHint="#BDBDBD"/>
+            <!-- DESKRIPSI -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi Singkat"
+                android:textStyle="bold"
+                android:textColor="#555555"
+                android:layout_marginTop="24dp"/>
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edittext"
+                android:gravity="top"
+                android:hint="Tambahkan deskripsi singkat"
+                android:padding="16dp"
+                android:textColor="#000000"
+                android:textColorHint="#BDBDBD"/>
+
+            <!-- FOTO -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profil Kelas"
+                android:textStyle="bold"
+                android:textColor="#555555"
+                android:layout_marginTop="24dp"/>
+
+            <LinearLayout
+                android:id="@+id/btnUpload"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_upload"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/ic_upload_image"
+                    android:tint="#C4C4C4"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tambahkan profil kelas"
+                    android:textColor="#BDBDBD"
+                    android:textSize="13sp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <!-- BUTTON -->
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="35dp"
+                android:text="Simpan Kelas"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:background="@drawable/bg_button_blue"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

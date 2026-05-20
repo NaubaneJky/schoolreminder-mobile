@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_home_gradient">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:text="Hai, Vica 👋"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#1D2B53"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="Semangat untuk hari ini!"
+                        android:textSize="14sp"
+                        android:textColor="#777"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_profile"
+                    android:background="@drawable/circle_bg"
+                    android:padding="4dp"/>
+            </LinearLayout>
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fokus hari ini"
+                android:textColor="#999"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
+
+            <!-- FOCUS CARD -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="#FF5B5B"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/book" />
+
+                        <TextView
+                            android:text="Matematika"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#333"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Batas waktu: besok"
+                            android:textColor="#666"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:text="Kerjakan sekarang"
+                            android:textAllCaps="false"
+                            android:backgroundTint="#5FADEB"
+                            android:layout_marginTop="12dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- WEEK -->
+            <TextView
+                android:text="Minggu ini"
+                android:textColor="#999"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!-- CALENDAR -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <!-- ITEM -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:text="Rab"
+                        android:textColor="#5FADEB"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="20"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#5FADEB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- TASK -->
+            <TextView
+                android:text="Tugasku"
+                android:textStyle="bold"
+                android:textColor="#999"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="12dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTTOM NAV -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/bottom_nav_bg">
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DFF1FF">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Matematika"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#233B6E"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XI PPLG 3"
+                android:textSize="16sp"
+                android:textColor="#233B6E"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_link"/>
+    </LinearLayout>
+
+    <!-- TAB -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/bg_tab">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Tugas"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Materi"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Siswa"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- LIST SISWA -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStudent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"/>
+
+</LinearLayout>
