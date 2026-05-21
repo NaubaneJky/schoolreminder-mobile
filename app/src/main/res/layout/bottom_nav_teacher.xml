@@ -1,108 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="300dp"
     android:layout_height="70dp"
-    android:orientation="horizontal"
+    android:layout_gravity="center_horizontal|bottom"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/bg_bottom_nav"
     android:gravity="center"
-    android:background="@drawable/bottom_nav_bg"
-    android:paddingHorizontal="8dp">
+    android:orientation="horizontal"
+    android:paddingHorizontal="15dp"
+    android:weightSum="4">
 
     <!-- HOME -->
     <LinearLayout
-        android:id="@+id/navHome"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical"
         android:gravity="center">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_school"
-            android:tint="#162B5B"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Beranda"
-            android:textSize="11sp"
-            android:textColor="#162B5B"
-            android:textStyle="bold"
-            android:layout_marginTop="4dp"/>
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_nav_active"
+            android:padding="10dp"
+            android:src="@drawable/ic_home"
+            android:tint="#5AAAE7"/>
     </LinearLayout>
 
-    <!-- TUGAS -->
+    <!-- CLASS -->
     <LinearLayout
-        android:id="@+id/navTask"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical"
         android:gravity="center">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_task"
-            android:tint="#B0B0B0"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tugas"
-            android:textSize="11sp"
-            android:textColor="#B0B0B0"
-            android:layout_marginTop="4dp"/>
+        <ImageButton
+            android:id="@+id/btnClass"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_class"
+            android:tint="#FFFFFF"/>
     </LinearLayout>
 
-    <!-- MATERI -->
+    <!-- NOTIF -->
     <LinearLayout
-        android:id="@+id/navMaterial"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical"
         android:gravity="center">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_upload"
-            android:tint="#B0B0B0"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Materi"
-            android:textSize="11sp"
-            android:textColor="#B0B0B0"
-            android:layout_marginTop="4dp"/>
+        <ImageButton
+            android:id="@+id/btnNotif"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_notification"
+            android:tint="#FFFFFF"/>
     </LinearLayout>
 
-    <!-- PROFIL -->
+    <!-- PROFILE -->
     <LinearLayout
-        android:id="@+id/navProfile"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical"
         android:gravity="center">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
             android:src="@drawable/ic_profile"
-            android:tint="#B0B0B0"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Profil"
-            android:textSize="11sp"
-            android:textColor="#B0B0B0"
-            android:layout_marginTop="4dp"/>
+            android:tint="#FFFFFF"/>
     </LinearLayout>
 
 </LinearLayout>

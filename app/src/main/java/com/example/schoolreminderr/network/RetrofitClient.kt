@@ -22,46 +22,25 @@ object RetrofitClient {
 
         val client = OkHttpClient.Builder()
             .addInterceptor(logging)
-
             .addInterceptor { chain ->
-
                 val token = sessionManager.getToken()
-
-                val requestBuilder = chain.request()
-                    .newBuilder()
-                    .addHeader(
-                        "Accept",
-                        "application/json"
-                    )
-                    .addHeader(
-                        "Content-Type",
-                        "application/json"
-                    )
-
-                // KIRIM TOKEN KE LARAVEL
+                val requestBuilder = chain.request().newBuilder()
+                    .addHeader("Accept", "application/json")
+                // JANGAN tambahkan Content-Type di sini
+                // karena multipart request butuh boundary yang di-set otomatis
                 if (token != null) {
-
-                    requestBuilder.addHeader(
-                        "Authorization",
-                        "Bearer $token"
-                    )
+                    requestBuilder.addHeader("Authorization", "Bearer $token")
                 }
-
                 chain.proceed(requestBuilder.build())
             }
-
             .build()
 
-        val gson = GsonBuilder()
-            .setLenient()
-            .create()
+        val gson = GsonBuilder().setLenient().create()
 
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(client)
-            .addConverterFactory(
-                GsonConverterFactory.create(gson)
-            )
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
             .create(ApiService::class.java)
     }

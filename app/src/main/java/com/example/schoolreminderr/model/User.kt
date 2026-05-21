@@ -5,5 +5,7 @@ data class User(
     val name: String,
     val email: String,
     val role: String,
-    val school: String?
+    val gender: String?,
+    val school: String?,
+    val photo: String?
 )

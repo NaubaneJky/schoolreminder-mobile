@@ -7,8 +7,10 @@
 
     <!-- CONTENT -->
     <LinearLayout
+        android:id="@+id/contentLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@id/bottomNav"
         android:orientation="vertical"
         android:padding="20dp">
 
@@ -52,7 +54,6 @@
                         android:textColor="#7A7A7A"
                         android:layout_marginStart="4dp"/>
                 </LinearLayout>
-
             </LinearLayout>
 
             <ImageView
@@ -87,7 +88,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"/>
-
         </LinearLayout>
 
         <!-- BUTTON -->
@@ -117,9 +117,13 @@
 
     </LinearLayout>
 
-    <!-- BOTTOM NAV -->
+    <!-- BOTTOM NAV — harus di luar LinearLayout content, nempel di bawah -->
     <include
+        android:id="@+id/bottomNav"
         layout="@layout/bottom_nav_teacher"
-        android:layout_alignParentBottom="true"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"/>
 
 </RelativeLayout>
