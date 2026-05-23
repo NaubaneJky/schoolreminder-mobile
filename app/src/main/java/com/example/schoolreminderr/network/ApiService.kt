@@ -9,7 +9,10 @@ import com.example.schoolreminderr.model.CreateClassResponse
 import com.example.schoolreminderr.model.ClassroomResponse
 import com.example.schoolreminderr.model.ClassMembersResponse
 import com.example.schoolreminderr.model.CreateAssignmentResponse
-import com.example.schoolreminderr.model.SubmissionListResponse
+import com.example.schoolreminderr.model.BaseResponse
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
+import com.example.schoolreminderr.model.SubmissionResponse
 import com.example.schoolreminderr.model.CreateMaterialResponse
 import com.example.schoolreminderr.model.ReminderResponse
 import com.example.schoolreminderr.model.ProfileResponse
@@ -52,7 +55,7 @@ interface ApiService {
     ): Call<CreateAssignmentResponse>
 
     @GET("assignment/{id}/submissions")
-    fun getSubmissions(@Path("id") assignmentId: Int): Call<SubmissionListResponse>
+    fun getSubmissions(@Path("id") assignmentId: Int): Call<SubmissionResponse>
 
     // Materi pakai multipart untuk support file
     @Multipart
@@ -72,4 +75,10 @@ interface ApiService {
 
     @GET("profile")
     fun getProfile(): Call<ProfileResponse>
+    @FormUrlEncoded
+    @POST("grade-submission")
+    fun gradeSubmission(
+        @Field("submission_id") submissionId: Int,
+        @Field("score") score: Int
+    ): Call<BaseResponse>
 }

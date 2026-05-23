@@ -5,7 +5,7 @@ data class SubmissionData(
     val assignment_id: Int,
     val student_id: Int,
     val file: String?,
-    val grade: Int?,
+    val score: Int?,
     val student: User?
 )
 

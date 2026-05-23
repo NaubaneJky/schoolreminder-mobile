@@ -44,7 +44,7 @@
         <activity android:name=".activity.TeacherClassActivity" android:exported="false"/>
         <activity android:name=".activity.TeacherReminderActivity" android:exported="false"/>
         <activity android:name=".activity.SubmissionTeacherActivity" android:exported="false"/>
-
+        <activity android:name=".activity.GradeSubmissionActivity"/>
         <!-- MAIN -->
         <activity android:name=".MainActivity" android:exported="false"/>
 

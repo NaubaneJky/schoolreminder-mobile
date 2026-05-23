@@ -57,7 +57,7 @@
             <ImageView
                 android:layout_width="22dp"
                 android:layout_height="22dp"
-                android:src="@drawable/ic_user"/>
+                android:src="@drawable/ic_email"/>
 
             <EditText
                 android:id="@+id/etUsername"
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:background="@android:color/transparent"
-                android:hint="Nama Pengguna"
+                android:hint="Masukan Email"
                 android:textColor="#1D2B53"
                 android:textColorHint="#1D2B53"
                 android:textSize="16sp"/>

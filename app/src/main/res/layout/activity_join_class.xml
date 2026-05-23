@@ -37,24 +37,13 @@
 
             <!-- NAMA KELAS -->
 
-            <TextView
+            <ProgressBar
+                android:id="@+id/progressBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama Kelas"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp"/>
-
-            <EditText
-                android:id="@+id/etNamaKelas"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@android:color/white"
-                android:hint="Masukkan nama kelas"
-                android:padding="16dp"
-                android:textColor="#000000"
-                android:textColorHint="#A0A0A0"
-                android:layout_marginBottom="24dp"/>
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp"/>
 
             <!-- KODE KELAS -->
 

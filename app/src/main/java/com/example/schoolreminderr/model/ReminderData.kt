@@ -8,3 +8,4 @@ data class ReminderData(
     val deadline: String,
     val badge: String
 )
+

@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.schoolreminderr.R
 import com.example.schoolreminderr.adapter.SubmissionAdapter
 import com.example.schoolreminderr.model.SubmissionData
-import com.example.schoolreminderr.model.SubmissionListResponse
+import com.example.schoolreminderr.model.SubmissionResponse
 import com.example.schoolreminderr.network.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -44,10 +44,10 @@ class SubmissionTeacherActivity : AppCompatActivity() {
 
     private fun loadSubmissions() {
         RetrofitClient.getInstance(this).getSubmissions(assignmentId)
-            .enqueue(object : Callback<SubmissionListResponse> {
+            .enqueue(object : Callback<SubmissionResponse> {
                 override fun onResponse(
-                    call: Call<SubmissionListResponse>,
-                    response: Response<SubmissionListResponse>
+                    call: Call<SubmissionResponse>,
+                    response: Response<SubmissionResponse>
                 ) {
                     if (response.isSuccessful && response.body() != null) {
                         val result = response.body()!!
@@ -60,7 +60,7 @@ class SubmissionTeacherActivity : AppCompatActivity() {
                         Toast.makeText(this@SubmissionTeacherActivity, "Gagal load submissions", Toast.LENGTH_SHORT).show()
                     }
                 }
-                override fun onFailure(call: Call<SubmissionListResponse>, t: Throwable) {
+                override fun onFailure(call: Call<SubmissionResponse>, t: Throwable) {
                     Toast.makeText(this@SubmissionTeacherActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
                 }
             })

@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.SCHOOLREMINDERR" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
-
-    <style name="CircleImage">
-        <item name="cornerSize">50%</item>
+    <style name="Theme.SCHOOLREMINDERR" parent="Theme.MaterialComponents.Light.NoActionBar">
     </style>
 </resources>

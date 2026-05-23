@@ -5,13 +5,16 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:gravity="center_vertical"
-    android:paddingVertical="14dp">
+    android:background="@drawable/bg_profile_card"
+    android:padding="14dp"
+    android:layout_marginBottom="10dp">
 
     <ImageView
         android:id="@+id/imgClass"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:src="@drawable/ic_class"/>
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_class"
+        android:tint="#5FADEB"/>
 
     <LinearLayout
         android:layout_width="0dp"
@@ -26,8 +29,8 @@
             android:layout_height="wrap_content"
             android:text="Matematika"
             android:textStyle="bold"
-            android:textColor="#2D2D2D"
-            android:textSize="16sp"/>
+            android:textColor="#1D2B53"
+            android:textSize="15sp"/>
 
         <TextView
             android:id="@+id/tvInfo"
@@ -35,12 +38,13 @@
             android:layout_height="wrap_content"
             android:text="XI PPLG 3 • 36 siswa"
             android:textSize="12sp"
-            android:textColor="#8A8A8A"/>
+            android:textColor="#8A8A8A"
+            android:layout_marginTop="2dp"/>
     </LinearLayout>
 
     <ImageView
-        android:layout_width="18dp"
-        android:layout_height="18dp"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
         android:src="@drawable/ic_arrow_right"
         android:tint="#BDBDBD"/>
 
