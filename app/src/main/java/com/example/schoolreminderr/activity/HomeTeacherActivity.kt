@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.Toast
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -39,6 +40,10 @@ class HomeTeacherActivity : AppCompatActivity() {
         setupShortcuts()
         setupNavbar()
         loadClasses()
+        // Foto profil di header bisa diklik
+        findViewById<ImageView>(R.id.imgProfile)?.setOnClickListener {
+            startActivity(Intent(this, ProfileTeacherActivity::class.java))
+        }
     }
 
     override fun onResume() {

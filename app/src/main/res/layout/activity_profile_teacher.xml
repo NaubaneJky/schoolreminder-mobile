@@ -3,21 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_home_blue_gradient">
+    android:background="@drawable/bg_splash">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@id/bottomNav"
         android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="24dp"
-            android:paddingBottom="90dp">
+            android:padding="24dp">
 
-            <!-- TITLE -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -28,7 +27,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"/>
 
-            <!-- FOTO -->
             <FrameLayout
                 android:layout_width="170dp"
                 android:layout_height="170dp"
@@ -52,7 +50,6 @@
                     android:padding="10dp"/>
             </FrameLayout>
 
-            <!-- NAMA -->
             <TextView
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
@@ -64,7 +61,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"/>
 
-            <!-- BADGE -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -78,120 +74,91 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="12dp"/>
 
-            <!-- CARD NAMA -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:layout_marginTop="35dp"
-                android:background="@drawable/bg_profile_card"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nama Lengkap"
-                    android:textColor="#B0B0B0"
-                    android:textSize="13sp"/>
-
-                <TextView
-                    android:id="@+id/tvFullName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="-"
-                    android:textColor="#333333"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
+            <LinearLayout android:layout_width="match_parent" android:layout_height="85dp"
+                android:layout_marginTop="35dp" android:background="@drawable/bg_profile_card"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Nama Lengkap" android:textColor="#B0B0B0" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvFullName" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-"
+                    android:textColor="#333333" android:textSize="16sp" android:textStyle="bold"
                     android:layout_marginTop="6dp"/>
             </LinearLayout>
 
-            <!-- CARD GENDER -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:layout_marginTop="18dp"
-                android:background="@drawable/bg_profile_card"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Jenis Kelamin"
-                    android:textColor="#B0B0B0"
-                    android:textSize="13sp"/>
-
-                <TextView
-                    android:id="@+id/tvGender"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="-"
-                    android:textColor="#333333"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
+            <LinearLayout android:layout_width="match_parent" android:layout_height="85dp"
+                android:layout_marginTop="18dp" android:background="@drawable/bg_profile_card"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Jenis Kelamin" android:textColor="#B0B0B0" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvGender" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-"
+                    android:textColor="#333333" android:textSize="16sp" android:textStyle="bold"
                     android:layout_marginTop="6dp"/>
             </LinearLayout>
 
-            <!-- CARD EMAIL -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:layout_marginTop="18dp"
-                android:background="@drawable/bg_profile_card"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Email"
-                    android:textColor="#B0B0B0"
-                    android:textSize="13sp"/>
-
-                <TextView
-                    android:id="@+id/tvEmail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="-"
-                    android:textColor="#333333"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
+            <LinearLayout android:layout_width="match_parent" android:layout_height="85dp"
+                android:layout_marginTop="18dp" android:background="@drawable/bg_profile_card"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Email" android:textColor="#B0B0B0" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvEmail" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-"
+                    android:textColor="#333333" android:textSize="16sp" android:textStyle="bold"
                     android:layout_marginTop="6dp"/>
             </LinearLayout>
 
-            <!-- CARD SEKOLAH -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:layout_marginTop="18dp"
-                android:background="@drawable/bg_profile_card"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nama Sekolah"
-                    android:textColor="#B0B0B0"
-                    android:textSize="13sp"/>
-
-                <TextView
-                    android:id="@+id/tvSchool"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="-"
-                    android:textColor="#333333"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
+            <LinearLayout android:layout_width="match_parent" android:layout_height="85dp"
+                android:layout_marginTop="18dp" android:background="@drawable/bg_profile_card"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Nama Sekolah" android:textColor="#B0B0B0" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvSchool" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-"
+                    android:textColor="#333333" android:textSize="16sp" android:textStyle="bold"
                     android:layout_marginTop="6dp"/>
             </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="85dp"
+                android:layout_marginTop="18dp" android:background="@drawable/bg_profile_card"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="No. HP" android:textColor="#B0B0B0" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvPhone" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-"
+                    android:textColor="#333333" android:textSize="16sp" android:textStyle="bold"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="85dp"
+                android:layout_marginTop="18dp" android:background="@drawable/bg_profile_card"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Alamat" android:textColor="#B0B0B0" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvAddress" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-"
+                    android:textColor="#333333" android:textSize="16sp" android:textStyle="bold"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+            <!-- LOGOUT -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="28dp"
+                android:text="Keluar"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:backgroundTint="#E53935"/>
+
+            <Space android:layout_width="match_parent" android:layout_height="20dp"/>
 
         </LinearLayout>
-
     </ScrollView>
 
-    <!-- NAVBAR di luar ScrollView, nempel di bawah -->
     <include
+        android:id="@+id/bottomNav"
         layout="@layout/bottom_nav_teacher"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

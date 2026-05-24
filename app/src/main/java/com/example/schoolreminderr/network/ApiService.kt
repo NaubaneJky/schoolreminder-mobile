@@ -10,8 +10,6 @@ import com.example.schoolreminderr.model.ClassroomResponse
 import com.example.schoolreminderr.model.ClassMembersResponse
 import com.example.schoolreminderr.model.CreateAssignmentResponse
 import com.example.schoolreminderr.model.BaseResponse
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
 import com.example.schoolreminderr.model.SubmissionResponse
 import com.example.schoolreminderr.model.CreateMaterialResponse
 import com.example.schoolreminderr.model.ReminderResponse
@@ -19,12 +17,7 @@ import com.example.schoolreminderr.model.ProfileResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.Multipart
-import retrofit2.http.POST
-import retrofit2.http.Part
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface ApiService {
 
@@ -43,7 +36,6 @@ interface ApiService {
     @GET("class-members/{id}")
     fun getClassMembers(@Path("id") classId: Int): Call<ClassMembersResponse>
 
-    // Tugas pakai multipart untuk support file
     @Multipart
     @POST("create-assignment")
     fun createAssignment(
@@ -57,7 +49,6 @@ interface ApiService {
     @GET("assignment/{id}/submissions")
     fun getSubmissions(@Path("id") assignmentId: Int): Call<SubmissionResponse>
 
-    // Materi pakai multipart untuk support file
     @Multipart
     @POST("create-material")
     fun createMaterial(
@@ -75,6 +66,20 @@ interface ApiService {
 
     @GET("profile")
     fun getProfile(): Call<ProfileResponse>
+
+    // Update profile pakai multipart untuk support foto
+    @Multipart
+    @POST("profile/update")
+    fun updateProfile(
+        @Part("name") name: RequestBody,
+        @Part("email") email: RequestBody,
+        @Part("gender") gender: RequestBody?,
+        @Part("school") school: RequestBody?,
+        @Part("phone_number") phone: RequestBody?,
+        @Part("address") address: RequestBody?,
+        @Part photo: MultipartBody.Part?
+    ): Call<ProfileResponse>
+
     @FormUrlEncoded
     @POST("grade-submission")
     fun gradeSubmission(
