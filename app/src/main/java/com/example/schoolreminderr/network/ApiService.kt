@@ -12,6 +12,7 @@ import com.example.schoolreminderr.model.CreateAssignmentResponse
 import com.example.schoolreminderr.model.BaseResponse
 import com.example.schoolreminderr.model.SubmissionResponse
 import com.example.schoolreminderr.model.CreateMaterialResponse
+import com.example.schoolreminderr.model.DashboardResponse
 import com.example.schoolreminderr.model.ReminderResponse
 import com.example.schoolreminderr.model.ProfileResponse
 import okhttp3.MultipartBody
@@ -28,7 +29,9 @@ interface ApiService {
     fun register(@Body request: RegisterRequest): Call<RegisterResponse>
 
     @POST("create-class")
-    fun createClass(@Body request: CreateClassRequest): Call<CreateClassResponse>
+    fun createClass(
+        @Body request: CreateClassRequest
+    ): Call<CreateClassResponse>
 
     @GET("classes")
     fun getClasses(): Call<ClassroomResponse>
@@ -66,7 +69,8 @@ interface ApiService {
 
     @GET("profile")
     fun getProfile(): Call<ProfileResponse>
-
+    @GET("dashboard")
+    fun getDashboard(): Call<DashboardResponse>
     // Update profile pakai multipart untuk support foto
     @Multipart
     @POST("profile/update")
@@ -85,5 +89,20 @@ interface ApiService {
     fun gradeSubmission(
         @Field("submission_id") submissionId: Int,
         @Field("score") score: Int
+    ): Call<BaseResponse>
+
+    @DELETE("classes/{id}")
+    fun deleteClass(
+        @Path("id") id: Int
+    ): Call<BaseResponse>
+
+    @DELETE("assignments/{id}")
+    fun deleteAssignment(
+        @Path("id") id: Int
+    ): Call<BaseResponse>
+
+    @DELETE("materials/{id}")
+    fun deleteMaterial(
+        @Path("id") id: Int
     ): Call<BaseResponse>
 }

@@ -12,7 +12,6 @@ data class ClassroomData(
     val assignments: List<AssignmentData>?,
     val materials: List<MaterialData>?
 )
-
 data class AssignmentData(
     val id: Int,
     val title: String,

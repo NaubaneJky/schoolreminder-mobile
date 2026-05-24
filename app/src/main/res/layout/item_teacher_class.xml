@@ -48,4 +48,5 @@
         android:src="@drawable/ic_arrow_right"
         android:tint="#BDBDBD"/>
 
+
 </LinearLayout>

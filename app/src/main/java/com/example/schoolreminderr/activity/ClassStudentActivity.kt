@@ -19,11 +19,35 @@ class ClassStudentActivity : AppCompatActivity() {
         rvClass = findViewById(R.id.rvClass)
 
         // 🔥 DUMMY DATA
-        val list = listOf(
-            Classroom("Matematika", "Pak Budi", "#B084CC"),
-            Classroom("Bahasa Indonesia", "Bu Kalim", "#FF6B00"),
-            Classroom("Informatika", "Pak Sunar", "#F06292"),
-            Classroom("IPA", "Bu Iffah", "#81C784")
+        val list = mutableListOf(
+
+            Classroom(
+                id = 1,
+                name = "Matematika",
+                teacher = "Pak Budi",
+                color = "#B084CC"
+            ),
+
+            Classroom(
+                id = 2,
+                name = "Bahasa Indonesia",
+                teacher = "Bu Kalim",
+                color = "#FF6B00"
+            ),
+
+            Classroom(
+                id = 3,
+                name = "Informatika",
+                teacher = "Pak Sunar",
+                color = "#F06292"
+            ),
+
+            Classroom(
+                id = 4,
+                name = "IPA",
+                teacher = "Bu Iffah",
+                color = "#81C784"
+            )
         )
 
         val adapter = ClassroomAdapter(list)
