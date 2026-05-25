@@ -3,29 +3,30 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
-    android:layout_marginBottom="20dp"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="5dp">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:layout_marginHorizontal="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="100dp"
         android:orientation="horizontal">
 
-        <!-- STRIP WARNA -->
+        <!-- STRIP WARNA (Akan diubah random di Adapter) -->
         <View
             android:id="@+id/viewColor"
-            android:layout_width="14dp"
+            android:layout_width="12dp"
             android:layout_height="match_parent"
             android:background="#B084CC"/>
 
-        <!-- CONTENT -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -33,34 +34,61 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tvClassName"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Matematika"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="#1D2B53"/>
+                    android:orientation="horizontal"
+                    android:gravity="bottom">
 
+                    <!-- NAMA MAPEL -->
+                    <TextView
+                        android:id="@+id/tvClassName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Matematika"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#2D3436"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                    <!-- SUBJECT/KELAS (DI SAMPING MAPEL) -->
+                    <TextView
+                        android:id="@+id/tvSubject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" (XI IPA 1)"
+                        android:textSize="14sp"
+                        android:textColor="#636E72"
+                        android:layout_marginStart="4dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+
+                <!-- NAMA GURU (DI BAWAH) -->
                 <TextView
                     android:id="@+id/tvTeacher"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="pak budi"
-                    android:textSize="16sp"
-                    android:textColor="#444"/>
+                    android:text="Guru: Pak Budi Santoso"
+                    android:textSize="14sp"
+                    android:textColor="#636E72"
+                    android:layout_marginTop="4dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
             </LinearLayout>
 
             <Button
                 android:id="@+id/btnOpen"
-                android:layout_width="110dp"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:text="buka kelas"
+                android:text="Buka"
+                android:textSize="12sp"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
-                android:backgroundTint="#B084CC"/>
+                android:backgroundTint="#B084CC"
+                app:cornerRadius="8dp"/>
+
         </LinearLayout>
-
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

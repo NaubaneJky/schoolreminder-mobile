@@ -32,7 +32,12 @@
         <activity android:name=".activity.RegisterActivity" android:exported="false"/>
 
         <!-- STUDENT -->
-        <activity android:name=".activity.HomeStudentActivity" android:exported="false"/>
+        <activity android:name=".activity.HomeStudentActivity" />
+        <activity android:name=".activity.StudentClassActivity" />
+        <activity android:name=".activity.StudentReminderActivity" />
+        <activity android:name=".activity.ProfileStudentActivity" />
+        <activity android:name=".activity.JoinClassActivity" android:exported="false"/>
+        <activity android:name=".activity.StudentClassDetailActivity" android:exported="false"/>
 
 
         <!-- TEACHER -->

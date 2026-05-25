@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="18dp"
+    android:layout_marginBottom="16dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_material_teacher">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Bab 5: Matriks"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#233B6E"/>
+
+    <Button
+        android:id="@+id/btnOpen"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:text="Buka"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#5CA9E6"/>
+
+</LinearLayout>

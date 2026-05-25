@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <!-- ScrollView untuk area yang bisa digeser -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNav"
+        android:scrollbars="none">
+
+        <!-- Semua konten dimasukkan ke dalam satu LinearLayout di dalam ScrollView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Profil"
+                android:textColor="#000000"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!-- PHOTO -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/bg_profile_circle"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_profile" />
+            </FrameLayout>
+
+            <!-- NAMA SINGKAT -->
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="..."
+                android:textColor="#233B6E"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- BADGE -->
+            <TextView
+                android:id="@+id/tvClassBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_class_badge"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="8dp"
+                android:text="Siswa"
+                android:textColor="#7FBF66"
+                android:textStyle="bold" />
+
+            <!-- FORM FIELDS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <!-- NAMA LENGKAP -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_profile_field"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Lengkap"
+                        android:textColor="#B0B0B0"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/tvFullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="..."
+                        android:textColor="#3A3A3A"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- JENIS KELAMIN -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_profile_field"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jenis Kelamin"
+                        android:textColor="#B0B0B0"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/tvGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="..."
+                        android:textColor="#3A3A3A"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- EMAIL -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_profile_field"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textColor="#B0B0B0"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="..."
+                        android:textColor="#3A3A3A"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- SEKOLAH -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="@drawable/bg_profile_field"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sekolah"
+                        android:textColor="#B0B0B0"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/tvSchool"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="..."
+                        android:textColor="#3A3A3A"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Nav tetap di luar ScrollView agar tidak ikut bergeser -->
+    <include
+        android:id="@+id/bottomNav"
+        layout="@layout/bottom_nav_student"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

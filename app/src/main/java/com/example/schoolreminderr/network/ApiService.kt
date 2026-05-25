@@ -34,7 +34,7 @@ interface ApiService {
         @Body request: CreateClassRequest
     ): Call<CreateClassResponse>
     @FormUrlEncoded
-    @POST("join") // Sesuaikan dengan route di Laravel: /api/join
+    @POST("join-class")  // ganti dari "join"
     fun joinClass(
         @Field("class_code") classCode: String
     ): Call<JoinClassResponse>
