@@ -172,11 +172,26 @@
                         android:textColor="#3A3A3A"
                         android:textSize="16sp"
                         android:textStyle="bold" />
-                </LinearLayout>
 
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="28dp"
+                    android:text="Keluar"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:backgroundTint="#E53935"/>
+
+                <Space android:layout_width="match_parent" android:layout_height="20dp"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+
 
     <!-- Bottom Nav tetap di luar ScrollView agar tidak ikut bergeser -->
     <include

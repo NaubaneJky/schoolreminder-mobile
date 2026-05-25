@@ -102,38 +102,6 @@
                 android:textColor="#000000"
                 android:textColorHint="#BDBDBD"/>
 
-            <!-- FOTO -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Profil Kelas"
-                android:textStyle="bold"
-                android:textColor="#555555"
-                android:layout_marginTop="24dp"/>
-
-            <LinearLayout
-                android:id="@+id/btnUpload"
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/bg_upload"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
-                    android:src="@drawable/ic_upload_image"
-                    android:tint="#C4C4C4"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tambahkan profil kelas"
-                    android:textColor="#BDBDBD"
-                    android:textSize="13sp"
-                    android:layout_marginTop="10dp"/>
-            </LinearLayout>
 
             <!-- BUTTON -->
             <Button

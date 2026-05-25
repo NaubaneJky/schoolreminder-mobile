@@ -39,6 +39,13 @@ class ProfileStudentActivity : AppCompatActivity() {
 
 
         setupNavbar()
+        findViewById<Button>(R.id.btnLogout).setOnClickListener {
+            sessionManager.logout()
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        }
         loadProfile()
     }
 
