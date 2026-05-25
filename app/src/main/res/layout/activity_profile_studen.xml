@@ -213,7 +213,7 @@
     </LinearLayout>
 
     <include
-        layout="@layout/bottom_nav"
+        layout="@layout/bottom_nav_student"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

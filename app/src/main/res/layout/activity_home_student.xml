@@ -1,194 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/bg_home_gradient">
+    android:background="@android:color/white">
 
-    <ScrollView
+    <!-- BACKGROUND GRADASI BIRU DI ATAS (TAMBAHAN BARU) -->
+    <View
+        android:id="@+id/background_top_gradient"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fillViewport="true">
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header_gradient" />
 
+    <View
+        android:id="@+id/background_bottom_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer_gradient" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-            <!-- HEADER -->
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical">
-
-                <LinearLayout
-                    android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tvName"
-                        android:text="Hai, Vica 👋"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:textColor="#1D2B53"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-                    <TextView
-                        android:text="Semangat untuk hari ini!"
-                        android:textSize="14sp"
-                        android:textColor="#777"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_profile"
-                    android:background="@drawable/circle_bg"
-                    android:padding="4dp"/>
+                    android:text="Hai, Siswa 👋"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#233B6E"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semangat untuk hari ini!"
+                    android:textColor="#4A4A4A"
+                    android:textSize="12sp"/>
             </LinearLayout>
 
-            <!-- TITLE -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fokus hari ini"
-                android:textColor="#999"
-                android:textStyle="bold"
-                android:layout_marginTop="24dp"/>
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="59dp"
+                android:background="@drawable/bg_profile_circle"
+                android:padding="10dp"
+                android:src="@drawable/ic_profile" />
+        </LinearLayout>
 
-            <!-- FOCUS CARD -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="6dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fokus hari ini"
+            android:textColor="#B0B0B0"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minggu Ini"
+            android:textColor="#B0B0B0"
+            android:layout_marginTop="25dp"/>
 
-                    <View
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent"
-                        android:background="#FF5B5B"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="16dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/book" />
-
-                        <TextView
-                            android:text="Matematika"
-                            android:textStyle="bold"
-                            android:textSize="20sp"
-                            android:textColor="#333"
-                            android:layout_marginTop="8dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-
-                        <TextView
-                            android:text="Batas waktu: besok"
-                            android:textColor="#666"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:text="Kerjakan sekarang"
-                            android:textAllCaps="false"
-                            android:backgroundTint="#5FADEB"
-                            android:layout_marginTop="12dp"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- WEEK -->
-            <TextView
-                android:text="Minggu ini"
-                android:textColor="#999"
-                android:textStyle="bold"
-                android:layout_marginTop="24dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <!-- CALENDAR -->
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="10dp">
+                android:padding="8dp"
+                android:clipToPadding="false"/>
+        </LinearLayout>
 
-                <!-- ITEM -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
 
-                    <TextView
-                        android:text="Rab"
-                        android:textColor="#5FADEB"
-                        android:textStyle="bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+        <!-- TUGAS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tugasku"
+            android:textColor="#B0B0B0"
+            android:layout_marginTop="25dp"/>
 
-                    <TextView
-                        android:text="20"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:textColor="#5FADEB"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- TASK -->
-            <TextView
-                android:text="Tugasku"
-                android:textStyle="bold"
-                android:textColor="#999"
-                android:layout_marginTop="24dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/task_list"
+            android:padding="10dp">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvTask"
+                android:id="@+id/rvStudentTask"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:nestedScrollingEnabled="false"
-                android:layout_marginTop="12dp"/>
+                android:layout_height="180dp"
+                android:nestedScrollingEnabled="false" />
         </LinearLayout>
-    </ScrollView>
-
-    <!-- BOTTOM NAV -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:background="@drawable/bottom_nav_bg">
 
     </LinearLayout>
 
-</LinearLayout>
+
+    <!-- NAVIGATION — pakai bottom_nav_teacher bukan bottom_nav -->
+    <include
+        layout="@layout/bottom_nav_student"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

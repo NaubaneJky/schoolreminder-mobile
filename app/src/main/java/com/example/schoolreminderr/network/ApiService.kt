@@ -13,6 +13,7 @@ import com.example.schoolreminderr.model.BaseResponse
 import com.example.schoolreminderr.model.SubmissionResponse
 import com.example.schoolreminderr.model.CreateMaterialResponse
 import com.example.schoolreminderr.model.DashboardResponse
+import com.example.schoolreminderr.model.JoinClassResponse
 import com.example.schoolreminderr.model.ReminderResponse
 import com.example.schoolreminderr.model.ProfileResponse
 import okhttp3.MultipartBody
@@ -32,6 +33,11 @@ interface ApiService {
     fun createClass(
         @Body request: CreateClassRequest
     ): Call<CreateClassResponse>
+    @FormUrlEncoded
+    @POST("join") // Sesuaikan dengan route di Laravel: /api/join
+    fun joinClass(
+        @Field("class_code") classCode: String
+    ): Call<JoinClassResponse>
 
     @GET("classes")
     fun getClasses(): Call<ClassroomResponse>
